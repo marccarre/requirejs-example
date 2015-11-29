@@ -6,4 +6,5 @@ define(['list', 'exports'], function(List, exports) {
   }
 
   exports.createList = createList;
+  console.log('Loaded: list_manager.js');
 });

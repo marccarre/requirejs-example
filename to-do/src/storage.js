@@ -18,6 +18,7 @@ define(function() {
     }
   }
 
+  console.log('Loaded: storage.js');
   return {
     save: save,
     load: load,

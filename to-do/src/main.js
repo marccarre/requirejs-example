@@ -4,3 +4,5 @@ require(['task_manager'], function(taskManager) {
   var aTask = taskManager.createTask('My first task!');
   console.log(aTask);
 });
+
+define();

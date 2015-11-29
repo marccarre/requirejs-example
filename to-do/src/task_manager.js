@@ -6,4 +6,5 @@ define(['task', 'exports'], function(Task, exports) {
   }
 
   exports.createTask = createTask;
+  console.log('Loaded: task_manager.js');
 });
