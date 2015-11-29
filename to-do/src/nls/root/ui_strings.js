@@ -1,7 +1,7 @@
 define({
   welcome: 'Welcome to the To-Do app!',
   createText: 'Create list',
-  placeHolderText: 'List name',
+  placeolderText: 'List name',
   noListsText: 'No saved lists',
   loadText: 'Load list',
   createTaskPlaceHolderText: 'Task  name',

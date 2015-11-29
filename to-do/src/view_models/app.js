@@ -1,4 +1,4 @@
-define(['ui_strings', 'knockout', 'view_models/list', 'text!views/list.html', 'list_manager', 'renderer'], 
+define(['i18n!nls/ui_strings', 'knockout', 'view_models/list', 'text!views/list.html', 'list_manager', 'renderer'], 
   function(uiStrings, ko, ListViewModel, listView, listManager, renderer) {
   'use strict';
 

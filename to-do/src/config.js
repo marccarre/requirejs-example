@@ -6,7 +6,8 @@ require.config({
     'knockout':     '../external/knockout-3.4.0',
     'smokesignals': '../external/smokesignals',
     'text':         '../external/text',
-    'views':        '../views'
+    'views':        '../views',
+    'i18n':         '../external/i18n'
   },
   // Use shim to load non-AMD scripts:
   shim: {
