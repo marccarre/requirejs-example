@@ -1,7 +1,7 @@
 define(function() {
   'use strict';
 
-  function Task() {
+  function Task(name) {
     this.completed = false;
     this.name = name;
   }

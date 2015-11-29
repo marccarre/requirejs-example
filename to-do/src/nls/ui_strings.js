@@ -1,3 +1,4 @@
 define({
-  'root': true
+  'root': true,
+  'cs-cz': true
 });

@@ -1,4 +1,5 @@
-define(['list_manager', 'knockout', 'i18n!nls/ui_strings'], function(listManager, ko, uiStrings) {
+define(['list_manager', 'knockout', 'i18n!nls/ui_strings', 'task_manager', 'renderer', 'view_models/task', 'text!views/task.html'], 
+  function(listManager, ko, uiStrings, taskManager, renderer, TaskViewModel, taskView) {
   'use strict';
 
   function ListViewModel() {
@@ -17,6 +18,26 @@ define(['list_manager', 'knockout', 'i18n!nls/ui_strings'], function(listManager
         this.enableAdd(false);
       }
     }, this);
+
+    this.addTask = function() {
+      var task = taskManager.createTask(this.taskName()),
+        container = document.querySelector('.todo_app ul'),
+        taskViewModel = new TaskViewModel();
+
+      this.list.tasks.push(task);
+
+      taskViewModel.id = 'task-' + (this.list.tasks.length - 1);
+      taskViewModel.name(task.name);
+      taskViewModel.completed(false);
+      
+      renderer.render(container, taskView, taskViewModel, true);
+
+      this.taskName('');
+
+      return taskViewModel;
+    }
+
+    this.addTaskHandler = this.addTask.bind(this);
   }
 
   return ListViewModel;
