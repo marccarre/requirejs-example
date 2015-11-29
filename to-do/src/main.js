@@ -1,10 +1,10 @@
-require(['task_manager', 'smokesignals'], function(taskManager, smokesignals) {
+require(['text!views/app.html', 'view_models/app', 'renderer'], function(appView, App, renderer) {
   'use strict';
 
-  var aTask = taskManager.createTask('My first task!');
-  console.log(aTask);
-  // One can see in the console that the convert method from smokesignals is correct exposed:
-  console.log(smokesignals); 
+  var container = document.body,
+    viewModel = new App();
+
+  renderer.render(container, appView, viewModel);
 });
 
 define();
