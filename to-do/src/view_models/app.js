@@ -29,10 +29,10 @@ define(['i18n!nls/ui_strings', 'knockout', 'view_models/list', 'text!views/list.
       this.listViewModel = new ListViewModel();
       this.listViewModel.listName(list.id);
       this.listViewModel.list = list;
+      
       this.listName('');
       renderer.render(container, listView, this);
     }
-
     this.addListHandler = this.addList.bind(this);
 
     this.removeList = function(container) {
